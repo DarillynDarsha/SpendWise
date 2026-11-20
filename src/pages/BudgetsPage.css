@@ -1,0 +1,907 @@
+/* =========================================
+   SPENDWISE - PREMIUM BUDGET MANAGEMENT
+   Modern Fintech Dashboard Design
+========================================= */
+
+
+/* =========================================
+   MAIN PAGE
+========================================= */
+
+.budgets-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 30px 32px 45px;
+  background: transparent;
+  color: #f8fafc;
+  box-sizing: border-box;
+  animation: budgetsFadeIn 0.45s ease;
+}
+
+@keyframes budgetsFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================
+   PAGE HEADER - CLEAN PROFESSIONAL STYLE
+========================================= */
+
+.budgets-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 5px 2px 28px;
+  margin-bottom: 24px;
+}
+
+.budgets-label {
+  display: inline-block;
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 1.8px;
+  margin-bottom: 10px;
+}
+
+.budgets-header h1 {
+  color: #1e293b;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  margin: 0;
+}
+
+.budgets-header p {
+  color: #64748b;
+  font-size: 14px;
+  margin-top: 9px;
+  line-height: 1.6;
+}
+/* Header Badge */
+
+.budgets-header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 16px;
+  color: #a5b4fc;
+  background: rgba(99, 102, 241, 0.12);
+  border: 1px solid rgba(129, 140, 248, 0.2);
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.header-status-dot {
+  width: 8px;
+  height: 8px;
+  background: #34d399;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(52, 211, 153, 0.5);
+}
+
+
+/* =========================================
+   BUDGET OVERVIEW GRID
+========================================= */
+
+.budget-overview {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-bottom: 30px;
+}
+
+
+/* =========================================
+   OVERVIEW CARDS
+========================================= */
+
+.budget-overview-card {
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+  padding: 26px;
+  background: linear-gradient(145deg, #202c3c, #192331);
+  border: 1px solid rgba(148, 163, 184, 0.13);
+  border-radius: 20px;
+  transition: transform 0.3s ease, border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.budget-overview-card::before {
+  content: "";
+  position: absolute;
+  width: 145px;
+  height: 145px;
+  right: -65px;
+  top: -75px;
+  border-radius: 50%;
+  background: rgba(99, 102, 241, 0.10);
+  pointer-events: none;
+}
+
+.budget-overview-card::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #6366f1, transparent);
+  opacity: 0.65;
+}
+
+.budget-overview-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(129, 140, 248, 0.55);
+  box-shadow: 0 15px 32px rgba(0, 0, 0, 0.2);
+}
+
+.total-spent-card::after {
+  background: linear-gradient(90deg, #f59e0b, transparent);
+}
+
+.remaining-budget-card::after {
+  background: linear-gradient(90deg, #10b981, transparent);
+}
+
+
+/* Overview Card Top */
+
+.budget-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 21px;
+}
+
+.overview-card-tag {
+  color: #94a3b8;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+
+/* Overview Icons */
+
+.budget-overview-icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 13px;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.purple-icon {
+  background: rgba(99, 102, 241, 0.17);
+  color: #a5b4fc;
+}
+
+.orange-icon {
+  background: rgba(249, 115, 22, 0.15);
+  color: #fb923c;
+}
+
+.green-icon {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+}
+
+
+/* Overview Text */
+
+.budget-overview-card > p {
+  color: #94a3b8;
+  font-size: 13px;
+  font-weight: 650;
+  margin-bottom: 10px;
+}
+
+.budget-overview-card h2 {
+  color: #f8fafc;
+  font-size: clamp(23px, 2vw, 29px);
+  font-weight: 800;
+  letter-spacing: -0.6px;
+  margin-bottom: 10px;
+  overflow-wrap: anywhere;
+}
+
+.budget-overview-card > span {
+  display: block;
+  color: #94a3b8;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   COMMON SECTION HEADING
+========================================= */
+
+.budget-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.budget-heading-content {
+  min-width: 0;
+}
+
+.budget-section-eyebrow {
+  display: block;
+  color: #818cf8;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+  margin-bottom: 9px;
+}
+
+.budget-section-heading h2 {
+  color: #f8fafc;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  margin: 0 0 8px;
+}
+
+.budget-section-heading p {
+  color: #94a3b8;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+
+/* =========================================
+   CREATE BUDGET SECTION
+========================================= */
+
+.budget-create-section {
+  position: relative;
+  background: linear-gradient(145deg, #1c2736, #182230);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: 21px;
+  padding: 30px;
+  margin-bottom: 28px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.13);
+}
+
+.budget-create-icon {
+  width: 43px;
+  height: 43px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  background: rgba(99, 102, 241, 0.16);
+  color: #a5b4fc;
+  border: 1px solid rgba(129, 140, 248, 0.18);
+  border-radius: 13px;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+
+/* =========================================
+   BUDGET FORM
+========================================= */
+
+.budget-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: end;
+  margin: 0;
+}
+
+.budget-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.budget-input-group label {
+  color: #cbd5e1;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+/* Input Fields */
+
+.budget-input-group input,
+.budget-input-group select {
+  width: 100%;
+  height: 49px;
+  min-height: 49px;
+  padding: 0 15px;
+  box-sizing: border-box;
+  background: #111c2a;
+  border: 1px solid #354457;
+  border-radius: 11px;
+  color: #f8fafc;
+  font-size: 13px;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.budget-input-group input::placeholder {
+  color: #718096;
+}
+
+.budget-input-group select option {
+  background: #202a38;
+  color: #ffffff;
+}
+
+
+/* Input Focus */
+
+.budget-input-group input:focus,
+.budget-input-group select:focus {
+  border-color: #818cf8;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+
+/* =========================================
+   CREATE BUDGET BUTTON
+========================================= */
+
+.create-budget-btn {
+  height: 49px;
+  min-height: 49px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 0 23px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 11px;
+  font-size: 13px;
+  font-weight: 750;
+  white-space: nowrap;
+  cursor: pointer;
+  box-shadow: 0 5px 14px rgba(99, 102, 241, 0.18);
+  transition: all 0.25s ease;
+}
+
+.create-budget-btn span {
+  font-size: 19px;
+  line-height: 1;
+}
+
+.create-budget-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 9px 22px rgba(99, 102, 241, 0.32);
+  filter: brightness(1.08);
+}
+
+.create-budget-btn:active {
+  transform: scale(0.97);
+}
+
+
+/* =========================================
+   BUDGET LIST SECTION
+========================================= */
+
+.budget-list-section {
+  background: linear-gradient(145deg, #1c2736, #182230);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: 21px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.13);
+}
+
+
+/* Budget Count */
+
+.budget-count {
+  flex-shrink: 0;
+  background: rgba(99, 102, 241, 0.13);
+  color: #a5b4fc;
+  border: 1px solid rgba(129, 140, 248, 0.2);
+  border-radius: 30px;
+  padding: 8px 14px;
+  font-size: 11px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   BUDGET CARDS GRID
+========================================= */
+
+.budget-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+
+/* =========================================
+   INDIVIDUAL BUDGET CARD
+========================================= */
+
+.budget-card {
+  min-width: 0;
+  padding: 25px;
+  background: linear-gradient(145deg, #263447, #202c3c);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: 18px;
+  transition: transform 0.28s ease, border-color 0.28s ease,
+    box-shadow 0.28s ease;
+}
+
+.budget-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(129, 140, 248, 0.45);
+  box-shadow: 0 13px 28px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================
+   BUDGET CARD HEADER
+========================================= */
+
+.budget-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.budget-category-info {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 0;
+}
+
+.budget-category-icon {
+  width: 43px;
+  height: 43px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  background: rgba(99, 102, 241, 0.13);
+  border: 1px solid rgba(129, 140, 248, 0.13);
+  border-radius: 13px;
+  font-size: 19px;
+}
+
+.budget-category-label {
+  display: block;
+  color: #94a3b8;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 6px;
+}
+
+.budget-card-header h3 {
+  color: #f8fafc;
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.budget-category-symbol {
+  width: 39px;
+  height: 39px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  background: rgba(99, 102, 241, 0.13);
+  color: #a5b4fc;
+  border-radius: 11px;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+
+/* =========================================
+   BUDGET AMOUNT DETAILS
+========================================= */
+
+.budget-amount-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  padding: 15px;
+  margin-bottom: 23px;
+  background: rgba(15, 23, 42, 0.28);
+  border: 1px solid rgba(148, 163, 184, 0.08);
+  border-radius: 12px;
+}
+
+.budget-amount-details > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.budget-amount-details span {
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+.budget-amount-details strong {
+  color: #f8fafc;
+  font-size: 16px;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.budget-amount-details .spent-amount {
+  color: #fb923c;
+}
+
+
+/* =========================================
+   BUDGET PROGRESS HEADING
+========================================= */
+
+.budget-progress-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.budget-progress-heading span {
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.budget-progress-heading strong {
+  color: #a5b4fc;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+
+/* =========================================
+   BUDGET PROGRESS BAR
+========================================= */
+
+.budget-progress-bar {
+  width: 100%;
+  height: 9px;
+  background: #111c2a;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 21px;
+}
+
+.budget-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #6366f1, #a78bfa);
+  border-radius: 20px;
+  transition: width 0.65s ease;
+}
+
+.budget-progress-fill.warning-progress {
+  background: linear-gradient(90deg, #f59e0b, #fb923c);
+}
+
+.budget-progress-fill.danger-progress {
+  background: linear-gradient(90deg, #f43f5e, #e11d48);
+}
+
+
+/* =========================================
+   REMAINING BUDGET
+========================================= */
+
+.budget-remaining {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 17px;
+}
+
+.budget-remaining span {
+  color: #94a3b8;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.budget-remaining strong {
+  font-size: 14px;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+  text-align: right;
+}
+
+.remaining-text {
+  color: #34d399;
+}
+
+.over-budget-text {
+  color: #fb7185 !important;
+}
+
+
+/* =========================================
+   BUDGET STATUS
+========================================= */
+
+.budget-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 10px;
+  font-weight: 800;
+  margin-bottom: 17px;
+}
+
+.status-success {
+  background: rgba(16, 185, 129, 0.12);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.12);
+}
+
+.status-warning {
+  background: rgba(245, 158, 11, 0.12);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.12);
+}
+
+.status-danger {
+  background: rgba(244, 63, 94, 0.12);
+  color: #fb7185;
+  border: 1px solid rgba(244, 63, 94, 0.12);
+}
+
+
+/* =========================================
+   DELETE BUDGET BUTTON
+========================================= */
+
+.budget-card .delete-budget-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 11px;
+  background: rgba(244, 63, 94, 0.07);
+  color: #fb7185;
+  border: 1px solid rgba(244, 63, 94, 0.2);
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 750;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.budget-card .delete-budget-btn:hover {
+  background: #e11d48;
+  color: #ffffff;
+  border-color: #e11d48;
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   EMPTY BUDGET STATE
+========================================= */
+
+.empty-budget-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(15, 23, 42, 0.25);
+  border: 1px dashed #475569;
+  border-radius: 17px;
+}
+
+.empty-budget-icon {
+  width: 62px;
+  height: 62px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 18px;
+  background: rgba(99, 102, 241, 0.15);
+  color: #a5b4fc;
+  border: 1px solid rgba(129, 140, 248, 0.16);
+  border-radius: 18px;
+  font-size: 27px;
+  font-weight: 800;
+}
+
+.empty-budget-state h3 {
+  color: #f8fafc;
+  font-size: 19px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.empty-budget-state p {
+  max-width: 390px;
+  margin: 0 auto;
+  color: #94a3b8;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   TABLET RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .budgets-page {
+    padding: 25px;
+  }
+
+  .budget-overview {
+    gap: 15px;
+  }
+
+  .budget-overview-card {
+    padding: 22px;
+  }
+
+  .budget-form {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .create-budget-btn {
+    grid-column: 1 / -1;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 768px) {
+
+  .budgets-page {
+    padding: 20px;
+  }
+
+  .budgets-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .budgets-header h1 {
+    font-size: 26px;
+  }
+
+  .budget-overview {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .budget-overview-card {
+    padding: 23px;
+  }
+
+  .budget-create-section,
+  .budget-list-section {
+    padding: 23px;
+  }
+
+  .budget-list {
+    grid-template-columns: 1fr;
+  }
+
+  .budget-card {
+    padding: 22px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE SCREENS
+========================================= */
+
+@media (max-width: 480px) {
+
+  .budgets-page {
+    padding: 15px;
+  }
+
+  .budgets-header h1 {
+    font-size: 23px;
+  }
+
+  .budgets-header p {
+    font-size: 12px;
+  }
+
+  .budget-create-section,
+  .budget-list-section {
+    padding: 19px;
+    border-radius: 16px;
+  }
+
+  .budget-form {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .create-budget-btn {
+    grid-column: auto;
+    width: 100%;
+  }
+
+  .budget-section-heading {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .budget-section-heading h2 {
+    font-size: 17px;
+  }
+
+  .budget-section-heading p {
+    font-size: 11px;
+  }
+
+  .budget-count {
+    font-size: 9px;
+    padding: 7px 9px;
+  }
+
+  .budget-card {
+    padding: 18px;
+  }
+
+  .budget-amount-details {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .budget-amount-details strong {
+    font-size: 14px;
+  }
+
+  .budget-card-header h3 {
+    font-size: 16px;
+  }
+
+}

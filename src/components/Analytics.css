@@ -1,0 +1,272 @@
+
+/* ==========================================
+   SPENDWISE - PREMIUM ANALYTICS
+   All Charts Full Width - Vertical Layout
+========================================== */
+
+/* =========================================
+   ANALYTICS MAIN CONTAINER
+========================================= */
+
+.analytics-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 25px;
+  box-sizing: border-box;
+}
+
+/* =========================================
+   ANALYTICS HEADING
+========================================= */
+
+.analytics-heading {
+  grid-column: 1 / -1;
+  margin-bottom: 2px;
+}
+
+.analytics-heading h2 {
+  font-size: 23px;
+  font-weight: 750;
+  color: #1e1b4b;
+  margin: 0 0 8px;
+}
+
+.analytics-heading p {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Analytics Layout */
+/* ==========================================
+   SPACE BETWEEN EACH CHART PANEL
+========================================== */
+
+.reports-page .analytics-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  min-width: 0;
+  margin-top: 0;
+}
+
+.reports-page .chart-card {
+  margin-bottom: 0;
+}
+/* Hide Duplicate Heading */
+.reports-page .analytics-heading {
+  display: none;
+}
+
+/* ==========================================
+   CHART CARDS
+========================================== */
+
+.reports-page .chart-card {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 26px;
+  overflow: hidden;
+  border-radius: 17px;
+  background: linear-gradient(145deg, #1e293b, #172033);
+  border: 1px solid #334155;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.reports-page .chart-card:hover {
+  transform: translateY(-3px);
+  border-color: #6366f1;
+}
+
+/* All Three Charts Full Width */
+.reports-page .chart-card:first-of-type {
+  grid-column: auto;
+}
+
+/* Chart Titles */
+.reports-page .chart-card h3 {
+  margin: 0 0 9px;
+  color: #f8fafc;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Chart Descriptions */
+.reports-page .chart-description {
+  margin: 0 0 20px;
+  color: #94a3b8;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   GRAPH VISIBILITY
+========================================== */
+
+.reports-page .recharts-responsive-container {
+  width: 100% !important;
+  min-width: 0;
+  min-height: 300px;
+}
+
+/* Axis Labels */
+.reports-page .recharts-cartesian-axis-tick-value {
+  fill: #cbd5e1;
+  font-size: 12px;
+}
+
+/* Grid Lines */
+.reports-page .recharts-cartesian-grid line {
+  stroke: #334155;
+  opacity: 0.8;
+}
+
+/* Axis Lines */
+.reports-page .recharts-cartesian-axis-line,
+.reports-page .recharts-cartesian-axis-tick-line {
+  stroke: #64748b;
+}
+
+/* Legend */
+.reports-page .recharts-legend-item-text {
+  color: #cbd5e1 !important;
+  font-size: 12px;
+}
+
+/* Pie Labels */
+.reports-page .recharts-pie-label-text {
+  fill: #f8fafc;
+  font-size: 12px;
+}
+
+/* Tooltip */
+.reports-page .recharts-default-tooltip {
+  padding: 10px !important;
+  border: 1px solid #475569 !important;
+  border-radius: 10px !important;
+  background: #0f172a !important;
+  color: #ffffff !important;
+}
+
+.reports-page .recharts-tooltip-label {
+  color: #e2e8f0 !important;
+  font-weight: 700;
+}
+
+/* Empty Chart Message */
+.reports-page .no-chart-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 250px;
+  color: #94a3b8;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 768px) {
+  .reports-page .analytics-container {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .reports-page .chart-card {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .reports-page .recharts-responsive-container {
+    min-height: 250px;
+  }
+
+  .reports-page .chart-card h3 {
+    font-size: 16px;
+  }
+}
+/* ==========================================
+   SPENDWISE - COMMON ANALYTICS THEME
+   Applies to Dashboard and Reports
+========================================== */
+
+/* Separate Each Chart Panel */
+.analytics-container,
+.reports-page .analytics-container {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 32px !important;
+  row-gap: 32px !important;
+  width: 100%;
+}
+
+/* Dark Theme for Every Analytics Panel */
+.analytics-container .chart-card {
+  width: 100%;
+  margin: 0 !important;
+  padding: 26px;
+  box-sizing: border-box;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #1e293b, #172033) !important;
+  border: 1px solid #334155 !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Chart Headings */
+.analytics-container .chart-card h3 {
+  color: #f8fafc !important;
+}
+
+/* Chart Descriptions */
+.analytics-container .chart-card .chart-description {
+  color: #94a3b8 !important;
+}
+
+/* Chart Labels */
+.analytics-container .recharts-cartesian-axis-tick-value {
+  fill: #cbd5e1 !important;
+}
+
+/* Chart Grid */
+.analytics-container .recharts-cartesian-grid line {
+  stroke: #334155 !important;
+}
+
+/* Chart Legend */
+.analytics-container .recharts-legend-item-text {
+  color: #cbd5e1 !important;
+}
+
+/* Pie Chart Labels */
+.analytics-container .recharts-pie-label-text {
+  fill: #f8fafc !important;
+}
+/* ==========================================
+   FIX: SPACE BETWEEN ALL THREE CHART PANELS
+========================================== */
+
+.analytics-container {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0 !important;
+}
+
+.analytics-container .chart-card {
+  width: 100% !important;
+  margin: 0 0 32px 0 !important;
+  box-sizing: border-box;
+}
+
+/* Remove extra space after the final chart */
+.analytics-container .chart-card:last-child {
+  margin-bottom: 0 !important;
+}

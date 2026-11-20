@@ -1,0 +1,310 @@
+/* =========================================
+   SPENDWISE - DARK PREMIUM FINTECH THEME
+========================================= */
+
+/* Main Transactions Page */
+.transactions-section {
+  min-height: 100vh;
+  padding: 35px;
+  box-sizing: border-box;
+  color: #f8fafc;
+  background:
+    radial-gradient(ellipse at top right, rgba(99, 102, 241, 0.15), transparent 40%),
+    linear-gradient(135deg, #0b1120, #111827 55%, #171b35);
+}
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.transactions-section h2 {
+  display: inline-block;
+  margin: 0 0 30px;
+  color: #f8fafc;
+  font-size: 29px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+
+/* Export Button */
+.transactions-section .export-btn {
+  float: right;
+  padding: 13px 22px;
+  border: 1px solid rgba(167, 139, 250, 0.3);
+  border-radius: 11px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 7px 22px rgba(99, 102, 241, 0.25);
+  transition: 0.25s ease;
+}
+
+.transactions-section .export-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(99, 102, 241, 0.4);
+}
+
+/* =========================================
+   FILTER PANEL
+========================================= */
+
+.transactions-section .filter-container {
+  clear: both;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  padding: 24px;
+  margin-bottom: 28px;
+  background: rgba(30, 41, 59, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.13);
+  border-radius: 17px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(15px);
+}
+
+/* Search Input */
+.transactions-section .search-input {
+  flex: 1;
+  min-width: 220px;
+  padding: 14px 17px;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  background: #111c30;
+  color: #f8fafc;
+  font-size: 14px;
+  outline: none;
+  transition: 0.25s ease;
+}
+
+.transactions-section .search-input::placeholder {
+  color: #94a3b8;
+}
+
+.transactions-section .search-input:focus {
+  border-color: #818cf8;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+/* Dropdown Filters */
+.transactions-section .filter-select {
+  min-width: 155px;
+  padding: 14px 15px;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  background: #111c30;
+  color: #e2e8f0;
+  font-size: 13px;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+}
+
+.transactions-section .filter-select option {
+  background: #1e293b;
+  color: #ffffff;
+}
+
+.transactions-section .filter-select:focus {
+  border-color: #818cf8;
+}
+
+/* Clear Filters */
+.transactions-section .clear-filter-btn {
+  padding: 14px 18px;
+  border: 1px solid rgba(129, 140, 248, 0.3);
+  border-radius: 10px;
+  background: rgba(99, 102, 241, 0.12);
+  color: #a5b4fc;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.transactions-section .clear-filter-btn:hover {
+  background: #6366f1;
+  color: #ffffff;
+}
+
+/* =========================================
+   TRANSACTIONS TABLE
+========================================= */
+
+.transactions-section table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  background: #172235;
+  border: 1px solid #29364b;
+  border-radius: 17px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Table Header */
+.transactions-section table thead {
+  background: linear-gradient(110deg, #312e81, #4338ca);
+}
+
+.transactions-section table th {
+  padding: 21px 22px;
+  background: transparent;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 800;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+  border: none;
+}
+
+/* Table Body */
+.transactions-section table td {
+  padding: 21px 22px;
+  color: #e2e8f0;
+  font-size: 14px;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.10);
+}
+
+/* Alternate Rows */
+.transactions-section table tbody tr {
+  background: #172235;
+  transition: background 0.2s ease;
+}
+
+.transactions-section table tbody tr:nth-child(even) {
+  background: #1b2940;
+}
+
+.transactions-section table tbody tr:hover {
+  background: #263652;
+}
+
+.transactions-section table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* =========================================
+   INCOME AND EXPENSE
+========================================= */
+
+.transactions-section td.income {
+  color: #34d399;
+  font-weight: 800;
+}
+
+.transactions-section td.expense {
+  color: #fb7185;
+  font-weight: 800;
+}
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.transactions-section .edit-btn,
+.transactions-section .delete-btn {
+  padding: 9px 14px;
+  margin-right: 7px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* Edit Button */
+.transactions-section .edit-btn {
+  background: rgba(99, 102, 241, 0.16);
+  border-color: rgba(129, 140, 248, 0.2);
+  color: #a5b4fc;
+}
+
+.transactions-section .edit-btn:hover {
+  background: #6366f1;
+  color: #ffffff;
+}
+
+/* Delete Button */
+.transactions-section .delete-btn {
+  background: rgba(244, 63, 94, 0.12);
+  border-color: rgba(251, 113, 133, 0.2);
+  color: #fb7185;
+}
+
+.transactions-section .delete-btn:hover {
+  background: #e11d48;
+  color: #ffffff;
+}
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.transactions-section table td[colspan="5"] {
+  padding: 55px 20px;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+  .transactions-section {
+    padding: 25px;
+  }
+
+  .transactions-section .search-input {
+    flex-basis: 100%;
+  }
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+  .transactions-section {
+    padding: 18px;
+  }
+
+  .transactions-section h2 {
+    font-size: 23px;
+  }
+
+  .transactions-section .export-btn {
+    float: none;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .transactions-section .filter-container {
+    padding: 16px;
+  }
+
+  .transactions-section .search-input,
+  .transactions-section .filter-select,
+  .transactions-section .clear-filter-btn {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .transactions-section table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .transactions-section table th,
+  .transactions-section table td {
+    padding: 15px;
+  }
+}

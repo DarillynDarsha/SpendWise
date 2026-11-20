@@ -1,0 +1,288 @@
+/* ==========================================
+   SPENDWISE - PREMIUM REPORTS PAGE
+   Dark Navy + Blue/Purple Theme
+========================================== */
+
+/* Main Reports Page */
+.reports-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 30px;
+  box-sizing: border-box;
+  background: #0b1120;
+  color: #f8fafc;
+}
+
+/* ==========================================
+   REPORTS HEADER
+========================================== */
+
+.reports-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 32px;
+  margin-bottom: 28px;
+  border-radius: 22px;
+  background: linear-gradient(120deg, #172554, #312e81, #4338ca);
+  border: 1px solid rgba(129, 140, 248, 0.25);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.reports-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #a5b4fc;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.reports-header h1 {
+  margin: 0 0 10px;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 750;
+}
+
+.reports-header p {
+  margin: 0;
+  color: #c7d2fe;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.reports-header-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.reports-badge-icon {
+  font-size: 20px;
+  color: #a5f3fc;
+}
+
+/* ==========================================
+   SUMMARY CARDS
+========================================== */
+
+.reports-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-bottom: 30px;
+}
+
+.reports-summary-card {
+  position: relative;
+  overflow: hidden;
+  padding: 25px;
+  min-width: 0;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #172033, #111827);
+  border: 1px solid #273449;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.reports-summary-card:hover {
+  transform: translateY(-4px);
+  border-color: #6366f1;
+}
+
+.reports-summary-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.reports-summary-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 43px;
+  border-radius: 13px;
+  background: rgba(99, 102, 241, 0.16);
+  color: #a5b4fc;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.reports-summary-tag {
+  padding: 7px 11px;
+  border-radius: 20px;
+  background: rgba(99, 102, 241, 0.14);
+  color: #a5b4fc;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.reports-summary-card p {
+  margin: 0 0 10px;
+  color: #94a3b8;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.reports-summary-card h2 {
+  margin: 0 0 12px;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 750;
+  overflow-wrap: anywhere;
+}
+
+.reports-summary-description {
+  color: #64748b;
+  font-size: 12px;
+}
+
+/* Income Card */
+.income-summary {
+  border-left: 4px solid #10b981;
+}
+
+.income-summary .reports-summary-icon {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+}
+
+.income-summary .reports-summary-tag {
+  background: rgba(16, 185, 129, 0.12);
+  color: #34d399;
+}
+
+/* Transaction Card */
+.transaction-summary {
+  border-left: 4px solid #818cf8;
+}
+
+/* ==========================================
+   ANALYTICS SECTION
+========================================== */
+
+.reports-analytics-section {
+  padding: 27px;
+  border-radius: 20px;
+  background: #111827;
+  border: 1px solid #273449;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+.reports-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.reports-section-label {
+  display: inline-block;
+  margin-bottom: 9px;
+  color: #818cf8;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.reports-section-heading h2 {
+  margin: 0 0 8px;
+  color: #f8fafc;
+  font-size: 23px;
+  font-weight: 750;
+}
+
+.reports-section-heading p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.reports-live-indicator {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 14px;
+  border-radius: 20px;
+  background: rgba(16, 185, 129, 0.1);
+  color: #34d399;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.reports-live-indicator span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 10px #10b981;
+}
+
+/* Chart Wrapper */
+.reports-chart-container {
+  width: 100%;
+  min-width: 0;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 768px) {
+  .reports-page {
+    padding: 18px;
+  }
+
+  .reports-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+  }
+
+  .reports-header h1 {
+    font-size: 24px;
+  }
+
+  .reports-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reports-analytics-section {
+    padding: 18px;
+  }
+
+  .reports-section-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .reports-page {
+    padding: 12px;
+  }
+
+  .reports-header {
+    padding: 20px;
+  }
+
+  .reports-summary-card h2 {
+    font-size: 25px;
+  }
+}
