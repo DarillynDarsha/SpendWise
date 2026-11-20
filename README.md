@@ -39,6 +39,12 @@ The application provides an organized interface for managing personal finances, 
 - View user profile information.
 - Manage personal account details.
 
+## 📸 Application Preview
+
+### Dashboard
+
+![SpendWise Dashboard](public/dashboard.png)
+
 ## 🛠️ Tech Stack
 
 | Technology | Purpose |
