@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './LoginPage.css'
+import API_BASE_URL from '../config/api';
 
 function LoginPage({ onLogin, onShowSignup }) {
 
@@ -21,7 +22,7 @@ function LoginPage({ onLogin, onShowSignup }) {
       setLoading(true)
 
       const response = await fetch(
-        'http://localhost:8080/api/auth/login',
+        `${API_BASE_URL}/api/auth/login`,
         {
           method: 'POST',
           headers: {

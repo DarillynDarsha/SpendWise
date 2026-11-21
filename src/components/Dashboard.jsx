@@ -5,6 +5,7 @@ import TransactionsPage from '../pages/TransactionsPage'
 import BudgetsPage from '../pages/BudgetsPage'
 import ReportsPage from '../pages/ReportsPage'
 import ProfilePage from '../pages/ProfilePage'
+import API_BASE_URL from '../config/api';
 
 const defaultTransactions = [
   {
@@ -114,7 +115,7 @@ useEffect(() => {
       const token = localStorage.getItem('spendwiseToken')
 
 const response = await fetch(
-  'http://localhost:8080/api/transactions',
+  `${API_BASE_URL}/api/transactions`,
   {
     method: 'GET',
     headers: {
@@ -284,7 +285,8 @@ async function handleAddTransaction(e) {
       if (!oldTransaction) return
 
       const response = await fetch(
-        `http://localhost:8080/api/transactions/${editingId}`,
+        `${API_BASE_URL}/api/transactions/${editingId}`
+,
         {
           method: 'PUT',
           headers: {
@@ -344,7 +346,7 @@ async function handleAddTransaction(e) {
 
     // Add New Transaction
     const response = await fetch(
-      'http://localhost:8080/api/transactions',
+      `${API_BASE_URL}/api/transactions`,
       {
         method: 'POST',
         headers: {
@@ -421,7 +423,7 @@ async function handleDeleteTransaction(id) {
   try {
 
     const response = await fetch(
-      `http://localhost:8080/api/transactions/${id}`,
+      `${API_BASE_URL}/api/transactions/${id}`,
       {
   method: 'DELETE',
   headers: {

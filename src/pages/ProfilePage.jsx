@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import './ProfilePage.css'
+import API_BASE_URL from '../config/api';
 
 function ProfilePage() {
 
@@ -36,7 +37,7 @@ function ProfilePage() {
         const token = localStorage.getItem('spendwiseToken')
 
         const response = await fetch(
-          'http://localhost:8080/api/users/me',
+          `${API_BASE_URL}/api/users/me`,
           {
             method: 'GET',
             headers: {
@@ -146,7 +147,7 @@ function ProfilePage() {
       const token = localStorage.getItem('spendwiseToken')
 
       const response = await fetch(
-        'http://localhost:8080/api/users/me',
+        `${API_BASE_URL}/api/users/me`,
         {
           method: 'PUT',
           headers: {
